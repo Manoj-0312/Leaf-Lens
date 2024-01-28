@@ -1,0 +1,111 @@
+body {
+  background-image: url('from-green-plants.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.home {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* margin-top: 20px; */
+  width: 100%;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /* background-color: rgb(225, 255, 236); */
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  position: absolute;
+  top: -1px;
+  /* Adjust as needed */
+  left: 8px;
+  /* Adjust as needed */
+  width: 80px;
+  /* Adjust as needed */
+  height: auto;
+  /* Maintain aspect ratio */
+  z-index: 1;
+  /* Ensure logo is above the background */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-left: 35px;    
+  /* padding: 10px 20px; */
+}
+
+.navbar ul li a {
+  display: inline-block;
+  padding: 12px 0 12px 0;
+  color: white;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 400;
+  font-size: large;
+  position: relative;
+  text-decoration: none;
+  background-size: 0% 0.1em;
+  background-position-y: 100%;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out;
+}
+
+.navbar ul li a:hover,
+a:focus,
+a:active {
+  background-size: 100% 0.1em;
+  background-position-x: 0%;
+  opacity: 1.2;
+}
+
+.navbar ul li a::before{
+  transition: 300ms;
+  height: 2px;
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  width: 0%;
+  bottom: 10px;
+}
+
+.navbar ul li a:hover::before{  
+  width: 100%;
+}
+
+.profile_notif {
+  display: flex;
+  position: absolute;
+  right: 20px;
+  flex-direction: row-reverse;
+  align-self: flex-end;
+  height: 40px;
+}
+
+.profile_notif img {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.profile_notif img:nth-child(2) {
+  margin-right: 20px;
+}
