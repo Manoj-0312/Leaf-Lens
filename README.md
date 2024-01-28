@@ -1,7 +1,6 @@
 Plant Health Inspector is an open-source web application powered by machine learning for the rapid detection of plant diseases. This repository contains the source code for the web application, which allows users to upload images of plants and receive instant predictions about their health. The backend is built with Flask, utilizing a TensorFlow and Keras model trained on the PlantVillage dataset for disease classification. The frontend is designed with simplicity and user-friendliness in mind, making it accessible to a wide audience of gardeners, farmers, and plant enthusiasts. The repository includes the necessary files for deployment, as well as documentation on how to set up and use the application.
 
 Key Features:
-
     Image upload for plant disease detection.
     Integration with a pre-trained machine learning model.
     User-friendly interface for easy navigation.
