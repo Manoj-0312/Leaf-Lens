@@ -5,9 +5,10 @@
 }
 
 body {
-    background-image: url('farm_sunset.jpg');
+    background-image: url('from-green-plants-min.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    backdrop-filter: blur(15px);
 }
 
 .bgbg {
@@ -24,7 +25,7 @@ body {
     background-color: aliceblue;
     border-radius: 15px;
     box-shadow: 3px 3px 6px black;
-    background-image: url('child-hands-holding-caring-young-green-plant.jpg');
+    background-image: url('form-bg-min.jpg');
     background-size: cover;
 }
 
