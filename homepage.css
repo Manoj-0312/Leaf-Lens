@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: url('from-green-plants.jpg');
+  background-image: url('from-green-plants-min.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0;
@@ -112,10 +112,12 @@ a:active {
 .profile_notif img {
   margin-left: 10px;
   margin-right: 10px;
+  /* width: 80px; */
 }
 
 .profile_notif img:nth-child(2) {
   margin-right: 20px;
+  width: 40px;
 }
 
 .main-body{
@@ -132,7 +134,12 @@ a:active {
   padding-left: 55px;
   display: flex;
   justify-content: center;
+  text-shadow: 5px 5px 5px black;
 }
+
+/* .main-header h1{
+  text-shadow: 5px 5px #940000;
+} */
 
 .below-header{
   padding: 0px;
@@ -160,6 +167,8 @@ a:active {
   width: fit-content;
   margin: auto;
   border-radius: 50px;
+  /* box-shadow: 2px 2px 2px #000000; */
+  text-shadow: 5px 5px 5px black;
 }
 
 /* .know-more:hover {
@@ -200,6 +209,7 @@ button {
 
 .button-fill:hover {
   color: rgb(255, 255, 255);
+  font-weight: 300;
 }
 
 .button-fill:before {
