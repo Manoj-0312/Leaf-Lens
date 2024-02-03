@@ -27,5 +27,18 @@ body {
     box-shadow: 3px 3px 6px black;
     background-image: url('form-bg-min.jpg');
     background-size: cover;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.form-img {
+    border-right: 2px solid white;
+    margin: 15px;
+    width: 100%;
+}
+
+.form-content {
+    width: 100%;
+    /* background-color: aliceblue;  Very imp - try this before testing the current one*/
 }
 
