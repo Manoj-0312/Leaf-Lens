@@ -5,7 +5,7 @@
 }
 
 .header {
-    background-image: url('from-green-plants-min.jpg');
+    background-image: url('../assets/images/from-green-plants-min.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;

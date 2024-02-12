@@ -1,0 +1,554 @@
+@font-face {
+  font-family: Just Believe;
+  src: url("../fonts/Just\ Believe.ttf");
+}
+*{
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.homePage{
+  background-image: url('../assets/images/from-green-plants-min.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 99vw;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* margin-top: 20px; */
+  background-color: #ffffff3b;
+  width: 99vw;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  /* background-color: rgb(225, 255, 236); */
+  backdrop-filter: blur(5px);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  /* border-radius: 25px; */
+  /* margin: 10px; */
+}
+
+
+.logo {
+  position: absolute;
+  top: -1px;
+  /* Adjust as needed */
+  left: 8px;
+  /* Adjust as needed */
+  width: 80px;
+  /* Adjust as needed */
+  height: auto;
+  /* Maintain aspect ratio */
+  z-index: 1;
+  /* Ensure logo is above the background */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-left: 35px;    
+  /* padding: 10px 20px; */
+}
+
+.navbar ul li a {
+  display: inline-block;
+  padding: 12px 0 12px 0;
+  color: white;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  position: relative;
+  text-decoration: none;
+  background-size: 0% 0.1em;
+  background-position-y: 100%;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out;
+}
+
+.navbar ul li a:hover,
+a:focus,
+a:active {
+  background-size: 100% 0.1em;
+  background-position-x: 0%;
+  opacity: 1;
+}
+
+.navbar ul li a::before{
+  transition: 300ms;
+  height: 2px;
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  width: 0%;
+  bottom: 10px;
+}
+
+.navbar ul li a:hover::before{  
+  width: 100%;
+}
+
+.profile_notif {
+  display: flex;
+  position: absolute;
+  right: 20px;
+  flex-direction: row-reverse;
+  align-self: flex-end;
+  height: 40px;
+}
+
+.icons{
+  font-size: 30px;
+  color: white;
+  padding-left: 30px;
+  padding-right: 35px;
+}
+
+.main-body{
+  padding-top: 150px;
+  margin: 0;
+}
+
+.main-header{
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15vh;
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  text-shadow: 5px 5px 5px black;
+}
+
+/* .main-header h1{
+  text-shadow: 5px 5px #940000;
+} */
+img{
+  width: 200px;
+}
+.top_heading{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.top_heading h1{
+  font-size: 5vh;
+}
+.homepage2{
+  padding-top: 40px;
+  min-height: 100vh;
+  height: fit-content;
+  width: 99vw;
+  /* background-color: black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.parts{
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  flex-wrap: wrap;
+
+}
+.part{
+  background-color: rgb(158, 231, 158);
+  height: 60vh;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 50px 0 50px;
+}
+.part p{
+  padding: 30px;
+}
+.part h1{
+  padding-top: 20px;
+  font-size: 3vh;
+}
+
+.below-main-header{
+  padding: 0px;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 90px;
+  font-size: 3vh;
+}
+
+.below-main-header {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+}
+
+.know-more {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  width: fit-content;
+  margin: auto;
+  border-radius: 50px;
+  /* box-shadow: 2px 2px 2px #000000; */
+  text-shadow: 5px 5px 5px black;
+}
+
+/* .know-more:hover {
+  background-color: #ffffffec;
+  color: black;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+} */
+
+button {
+  position: relative;
+  display:block;
+  height: 60px;
+  width: 165px;
+  margin: 10px 7px;
+  padding: 5px 5px;
+  font-weight: 200;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffffc5;
+  border: 2px #f8f8f8 solid;
+  border-radius: 4px;
+  outline: 0;
+  overflow:hidden;
+  background: none;
+  z-index: 1;
+  cursor: pointer;
+  /* backdrop-filter: blur(5px); */
+  background-color: #ffffff24;
+  transition:         0.08s ease-in;
+  --o-transition:      0.08s ease-in;
+  --ms-transition:     0.08s ease-in;
+  --moz-transition:    0.08s ease-in;
+  --webkit-transition: 0.08s ease-in;
+  border-radius: 50px;
+}
+
+.button-fill:hover {
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+}
+
+.button-fill:before {
+  content: "";
+  position: absolute;
+  background: #ffffff6e;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  --webkit-transition: top 0.09s ease-in;
+}
+
+.button-fill:hover:before {
+  top: 0;
+}
+
+
+/* Import Google Font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #495af7;
+  --secondary-color: #fff;
+  --text-color: #fff;
+  --input-color: #000;
+  --light-gery: #f5f5f5;
+  --pending-color: #b7e4ec;
+  --pending-text-color: #0c6047;
+  --error-color: #ffc1c5;
+  --error-text-color: #631920;
+}
+.wrapper {
+  width: 500px;
+  /* background: #fff; */
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.wrapper header {
+  display: flex;
+  font-size: 21px;
+  font-weight: 500;
+  /* color: var(--text-color); */
+  padding: 16px 15px;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+header i {
+  font-size: 0em;
+  cursor: pointer;
+  margin-right: 8px;
+}
+.wrapper.active header i {
+  margin-left: 5px;
+  font-size: 30px;
+}
+.wrapper .input-part {
+  margin: 20px 25px 30px;
+}
+.wrapper.active .input-part {
+  display: none;
+}
+.input-part .info-txt {
+  display: none;
+  font-size: 17px;
+  text-align: center;
+  padding: 12px 10px;
+  border-radius: 7px;
+  margin-bottom: 15px;
+}
+.input-part .info-txt.error {
+  color: var(--error-text-color);
+  display: block;
+  background: var(--error-color);
+  border: 1px solid #f5c6cb;
+}
+.input-part .info-txt.pending {
+  color: var(--pending-text-color);
+  display: block;
+  background: var(--pending-color);
+  border: 1px solid #bee5eb;
+}
+.input-part :where(input, button) {
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 7px;
+}
+.input-part input {
+  text-align: center;
+  padding: 0 15px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.input-part input:is(:focus, :valid) {
+  border: 2px solid var(--primary-color);
+}
+.input-part input::placeholder {
+  color: rgb(24, 24, 24) !important;
+}
+.input-part .separator {
+  height: 1px;
+  width: 100%;
+  margin: 25px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.separator::before {
+  content: "or";
+  color: var(--light-gery);
+  font-size: 19px;
+  padding: 0 15px;
+  border-radius: 20px;
+}
+.input-part button {
+  color: var(--text-color);
+  cursor: pointer;
+  background: var(--primary-color);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  transition: 0.3s ease;
+}
+.input-part button:hover {
+  transform: scale(1.03);
+}
+
+.wrapper .weather-part {
+  display: none;
+  margin: 30px 0 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.wrapper.active .weather-part {
+  display: flex;
+}
+.weather-part img {
+  max-width: 125px;
+}
+.weather-part .temp {
+  display: flex;
+  font-weight: 500;
+  font-size: 72px;
+}
+.weather-part .temp .numb {
+  font-weight: 600;
+}
+.weather-part .temp .deg {
+  font-size: 40px;
+  display: block;
+  margin: 10px 5px 0 0;
+}
+.weather-part .weather {
+  font-size: 21px;
+  text-align: center;
+  margin: -5px 20px 15px;
+}
+.weather-part .location {
+  display: flex;
+  font-size: 19px;
+  padding: 0 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  align-items: flex-start;
+}
+.location i {
+  font-size: 22px;
+  margin: 4px 5px 0 0;
+}
+.weather-part .bottom-details {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+}
+.bottom-details .column {
+  display: flex;
+  width: 100%;
+  padding: 15px 0;
+  align-items: center;
+  justify-content: center;
+}
+.column i {
+  color: var(--secondary-color);
+  font-size: 40px;
+}
+.column.humidity {
+  border-left: 1px solid #ccc;
+}
+.column .details {
+  margin-left: 3px;
+}
+.details .temp,
+.humidity span {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: -3px;
+}
+.details .temp .deg {
+  margin: 0;
+  font-size: 17px;
+  padding: 0 2px 0 1px;
+}
+.column .details p {
+  font-size: 14px;
+  margin-top: -6px;
+}
+.humidity i {
+  font-size: 37px;
+}
+
+/* COLOR PALETTE */
+/* COLOR PICKER */
+
+
+
+
+/* Media Queries */
+@media only screen and (max-width: 436px) {
+  .wrapper {
+    max-width: 90%;
+    min-width: 90%;
+  }
+
+  .color-palette {
+    max-width: 90%;
+    min-width: 90%;
+  }
+
+  .color-palette .theme-color {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media only screen and (max-width: 636px) {
+  .color-palette {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    width: 400px;
+    margin-bottom: 16px;
+  }
+
+  .color-palette .theme-color {
+    margin-top: 10px;
+  }
+
+  .color-palette .theme-color:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+
+.weatherPage{
+  height: 100vh;
+  width: 99vw;
+  background-color: red;
+}
+
+
+
+
+
+.weatherPage{
+  background-image: url(../assets/images/weather-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
