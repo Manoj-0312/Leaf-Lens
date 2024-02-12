@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact_us.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Montserrat&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="leaf lens logo.png" alt="Logo" class="logo">
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="profile_notif">
+
+            <img src="notif_icon.png" alt="Notification" class="notif_img">
+            <img src="profile_icon.png" alt="Profile" class="profile_img" onclick="navigateToPage()">
+
+        </div>
+    </div>
+    <section>
+        <div class="contact-body">
+            <div class="contact-form">
+                <form action="">
+                    <div class="form-header-div"><h2 class="form-header">GET IN TOUCH</h2></div>
+                    <input type="text" placeholder="Name" required class="username-box">
+                    <input type="email" placeholder="Email" required class="username-box">
+                    <input type="text" placeholder="Phone Number" required class="username-box">
+                    <textarea id="message" rows="4" cols="50" placeholder="Message"></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h2>OUR INFO</h2>
+                <div class="contact-email"><img src="mail-inbox-app.png" alt="Email"><h3>info@leaflens.com</h3> </div>
+                <div class="contact-phone"><img src="telephone.png" alt=""><h3>+91 1234567890</h3></div>
+                <div class="contact-location"><img src="location.png" alt=""><h3>Bengaluru, Karnataka, India</h3></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

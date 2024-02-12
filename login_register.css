@@ -76,6 +76,7 @@ body {
     border-radius: 40px;
     font-size: 12px;
     font-family: "Inter", sans-serif;
+    font-weight: 800;
 }
 
 .input-box i {
@@ -123,6 +124,7 @@ body {
     cursor: pointer;
     font-size: medium;
     font-family: "Inter", sans-serif;
+    font-weight: 600;
 }
 
 .forgot-pass a {
