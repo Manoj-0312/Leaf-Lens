@@ -193,7 +193,7 @@ img{
   color: #ffffff;
   font-family: 'Inter', sans-serif;
   font-family: 'Montserrat', sans-serif;
-  padding-left: 90px;
+  /* padding-left: 90px; */
   font-size: 3vh;
 }
 
@@ -233,7 +233,7 @@ button {
   width: 165px;
   margin: 10px 7px;
   padding: 5px 5px;
-  font-weight: 200;
+  font-weight: 500;
   font-size: 15px;
   letter-spacing: 1px;
   font-family: "Montserrat", sans-serif;
@@ -312,7 +312,7 @@ button {
   display: flex;
   font-size: 21px;
   font-weight: 500;
-  /* color: var(--text-color); */
+  color: #00000070;
   padding: 16px 15px;
   align-items: center;
   border-bottom: 1px solid #ccc;
@@ -536,7 +536,6 @@ header i {
 .weatherPage{
   height: 100vh;
   width: 99vw;
-  background-color: red;
 }
 
 
@@ -544,10 +543,11 @@ header i {
 
 
 .weatherPage{
-  background-image: url(../assets/images/weather-bg.jpg);
+  background-image: url(../assets/images/weather1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  background-position: bottom;
   justify-content: center;
   align-items: center;
   color: white;
