@@ -148,6 +148,7 @@ a:active {
     height: 35px;
     padding: 15px;
     font-family: "Inter", sans-serif;
+    font-weight: 800;
 }
 
 .contact-form textarea {
@@ -159,6 +160,7 @@ a:active {
     font-family: "Inter", sans-serif;
     border: none;
     outline: none;
+    font-weight: 800;
 }
 
 .contact-form button {
@@ -206,8 +208,10 @@ a:active {
     justify-content: center;
     padding-left: 5%;
     vertical-align: top;
+    font-weight: 800;
 }
 .contact-info h2 {
     font-family: "Inter", sans-serif;
     display: block;
+    font-weight: 800;
 }
