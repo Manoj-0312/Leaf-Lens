@@ -18,5 +18,9 @@ def login():
 def contactus():
     return render_template('contact_us.html')
 
+@app.route('/sign_up')
+def sign_up():
+    return render_template('sign_up.html')
+
 if __name__=='__main__':
     app.run(debug=True)
