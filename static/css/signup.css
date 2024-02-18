@@ -127,11 +127,6 @@ body {
     font-weight: 600;
 }
 
-.btn a{
-    text-decoration: none;
-    color: black;
-}
-
 .forgot-pass a {
     color: white;
     font-family: "Inter", sans-serif;
