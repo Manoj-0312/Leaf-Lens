@@ -61,12 +61,13 @@ body {
 
 .input-box-main {
     margin-left: 15%;
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
 .input-box {
     position: relative;
     margin: 10%;
+    
 }
 
 .input-box input {
@@ -75,8 +76,10 @@ body {
     border: 2px solid gray;
     border-radius: 40px;
     font-size: 12px;
-    font-family: "Inter", sans-serif;
     font-weight: 800;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .input-box i {
@@ -101,7 +104,7 @@ body {
 }
 
 .buttons {
-    margin-top: 6%;
+    margin-top: 4%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -132,9 +135,12 @@ body {
     font-family: "Inter", sans-serif;
     font-size: medium;
     text-decoration: none;
+    left: 3%;
+    position: relative;
 }
 
 .forgot-pass a:hover {
     text-decoration: underline;
+
 }
 
