@@ -552,3 +552,53 @@ header i {
   align-items: center;
   color: white;
 }
+
+
+
+/* footer_css */
+
+
+.footer-content1{
+  text-decoration: none;
+  color: rgb(65, 2, 65);
+}
+
+.footer-content1:hover {
+  color: rgb(7, 56, 108);
+}
+
+.footer{
+  position: relative;
+  background-color: #0c6047;
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-evenly;
+  padding-top: 50px;
+}
+
+.footer-content {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer_img {
+  width: 100%;
+  height: 500px;
+  padding: 0;
+}
+
+.follow{
+  display: flex;
+  justify-content: space-between;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+}

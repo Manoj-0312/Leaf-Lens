@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="../static/contact_us.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/contact_us.css')}}">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Montserrat&display=swap');
@@ -16,7 +16,7 @@
         <img src="../assets/logo and favicon/Logo.png" alt="Logo" class="logo">
         <nav class="navbar">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="{{url_for('index')}}">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Store</a></li>
                 <li><a href="#">Contact</a></li>
