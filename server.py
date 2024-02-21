@@ -4,7 +4,7 @@ from MarketPrices import fruit_prices,vegetable_prices
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:manoj4897@localhost:5432/Leaf_lens'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:YOUR_PASWORD@localhost:5432/Leaf_lens'
 
 
 db = SQLAlchemy(app)
