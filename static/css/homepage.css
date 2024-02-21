@@ -2,6 +2,7 @@
   font-family: Just Believe;
   src: url("../fonts/Just\ Believe.ttf");
 }
+
 *{
   box-sizing: border-box;
 }
@@ -23,7 +24,7 @@ body {
   display: flex;
   align-items: center;
   /* margin-top: 20px; */
-  background-color: #ffffff3b;
+  background-color: #518939b7;
   width: 99vw;
   justify-content: center;
   padding-top: 15px;
@@ -172,7 +173,7 @@ img{
 
 }
 .part{
-  background-color: rgb(158, 231, 158);
+  background-color: #81B622;
   height: 60vh;
   width: 400px;
   display: flex;
@@ -203,6 +204,7 @@ img{
   font-weight: 100;
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .know-more {
@@ -211,12 +213,13 @@ img{
   font-weight: 900;
   display: flex;
   justify-content: center;
-  padding: 15px;
+  /* padding: 15px; */
   width: fit-content;
   margin: auto;
   border-radius: 50px;
   /* box-shadow: 2px 2px 2px #000000; */
   text-shadow: 5px 5px 5px black;
+  background-color: #3d860c;
 }
 
 /* .know-more:hover {
@@ -231,7 +234,7 @@ button {
   display:block;
   height: 60px;
   width: 165px;
-  margin: 10px 7px;
+  /* margin: 10px 7px; */
   padding: 5px 5px;
   font-weight: 500;
   font-size: 15px;
@@ -543,7 +546,7 @@ header i {
 
 
 .weatherPage{
-  background-image: url(../assets/images/weather1.jpg);
+  /* background-image: url(../assets/images/weather-background.png); */
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -551,6 +554,24 @@ header i {
   justify-content: center;
   align-items: center;
   color: white;
+}
+
+.checkWeatherText{
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: black;
+  position: absolute;
+  left: 20vw;
+  font-size: 500%;
+}
+
+.weather-glass {
+  /* background-image: url(../assets/images/beautiful-landscape-cityscape-seoul-city.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background-color: skyblue;
+  border-radius: 7px;
 }
 
 
@@ -569,10 +590,10 @@ header i {
 
 .footer{
   position: relative;
-  background-color: #0c6047;
+  background-color: #6A6F77;
   background-position: center;
   background-size: cover;
-  height: 400px;
+  height: 60vh;
   display: flex;
   flex-direction: row;
   align-items: start;
@@ -580,11 +601,31 @@ header i {
   padding-top: 50px;
 }
 
+
+.footer a{
+  text-decoration: none;
+  color: white;
+  font-size: small;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.footer p{
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
 .footer-content {
-  text-align: left;
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
+}
+
+.footer-content p {
+  position: relative;
+  padding-bottom: 20%;
 }
 
 .footer_img {

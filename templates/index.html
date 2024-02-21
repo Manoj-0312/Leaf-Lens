@@ -10,9 +10,11 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Montserrat&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="shortcut icon" href="{{url_for('static',filename='assets/logo and favicon/Logo.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -42,7 +44,7 @@
         <div class="know-more"><button class="button-fill">Know More</button></div>
     </div>
 </section>
-<section class="homepage2">
+<section class="homepage2" data-aos="fade-left">
     <div class="top_heading">
         <img src="../assets/logo and favicon/Logo.png" alt="">
         <h1 class="main_heading">Our Solutions</h1>
@@ -70,9 +72,10 @@
 
     </div>
 </section>
-<section class="weatherPage">
-    <div class="weather-glass">
 
+<p class="checkWeatherText" data-aos="fade-left">Check Live Weather, now!</p>
+<section class="weatherPage">
+    <div class="weather-glass" data-aos="fade-left">
 
     <div class="wrapper">
         <header><i class="bx bx-left-arrow-alt"></i>Weather App</header>
@@ -125,25 +128,25 @@
     <div class="footer">
         <div class="footer-content">
             <p>ABOUT US</p>
-            <a class="footer-content1" href="">Company profile</a>
-            <a class="footer-content1" href="">R & D</a>
-            <a class="footer-content1" href="">Our team</a>
-            <a class="footer-content1" href="">Our Promise</a>
+            <a class="footer-content1" href="">Company profile</a><br>
+            <a class="footer-content1" href="">R & D</a><br>
+            <a class="footer-content1" href="">Our team</a><br>
+            <a class="footer-content1" href="">Our Promise</a><br>
             <a class="footer-content1" href="">Our Milestones</a>  
             
         </div>
         <div class="footer-content">
             <p>OUR PRODUCTS</p>
-            <a class="footer-content1" href="">herbicides</a>
-            <a class="footer-content1" href="">Insecticide</a>
+            <a class="footer-content1" href="">Herbicides</a><br>
+            <a class="footer-content1" href="">Insecticide</a><br>
             <a class="footer-content1" href="">Fungicide</a>
             
         </div>
         <div class="footer-content">
             <p>QUICK LINKS</p>
-            <a class="footer-content1" href="">About us</a>
-            <a class="footer-content1" href="">Our products</a>
-            <a class="footer-content1" href="">Career</a>
+            <a class="footer-content1" href="">About us</a><br>
+            <a class="footer-content1" href="">Our products</a><br>
+            <a class="footer-content1" href="">Career</a><br>
             <a class="footer-content1" href="">Contact Us</a>
             
         </div>
@@ -162,6 +165,10 @@
 </footer>
 </section>
 <script src="../scripts/script.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 
 </html>
