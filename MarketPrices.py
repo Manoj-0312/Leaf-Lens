@@ -171,6 +171,3 @@ vegetable_prices = {
         "url":"https://m.media-amazon.com/images/I/71xkI-PIE5L._AC_UF894,1000_QL80_.jpg"
     },
 }
-import requests
-response = requests.get("http://127.0.0.1:5000/vegetables")
-print(response)
