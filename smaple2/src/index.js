@@ -52,7 +52,7 @@ function updateTime() {
 }
 
 // Update time every second
-setInterval(updateTime, 1000);
+// setInterval(updateTime, 1000);
 
 // Initial call to display time immediately
-updateTime();
+// updateTime();
