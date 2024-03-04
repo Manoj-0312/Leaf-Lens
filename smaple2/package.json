@@ -1,5 +1,7 @@
 {
   "devDependencies": {
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
     "tailwindcss": "^3.4.1"
   },
   "name": "smaple2",
@@ -62,7 +64,6 @@
     "picomatch": "^2.3.1",
     "pify": "^2.3.0",
     "pirates": "^4.0.6",
-    "postcss": "^8.4.35",
     "postcss-import": "^15.1.0",
     "postcss-js": "^4.0.1",
     "postcss-load-config": "^4.0.2",
