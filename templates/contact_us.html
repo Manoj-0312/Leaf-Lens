@@ -32,12 +32,12 @@
     <section>
         <div class="contact-body">
             <div class="contact-form">
-                <form action="">
+                <form action="{{url_for('contactus')}}" method="post" >
                     <div class="form-header-div"><h2 class="form-header">GET IN TOUCH</h2></div>
-                    <input type="text" placeholder="Name" required class="username-box">
-                    <input type="email" placeholder="Email" required class="username-box">
-                    <input type="text" placeholder="Phone Number" required class="username-box">
-                    <textarea id="message" rows="4" cols="50" placeholder="Message"></textarea>
+                    <input type="text" placeholder="Name" name="Name" required class="username-box">
+                    <input type="email" placeholder="Email" name="Email" required class="username-box">
+                    <input type="text" placeholder="Phone Number" name="Phone Number" required class="username-box">
+                    <textarea id="message" rows="4" cols="50" name="Message" placeholder="Message" required class="username-box"></textarea>
                     <button type="submit" class="btn">Send Message</button>
                 </form>
             </div>
