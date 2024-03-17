@@ -96,7 +96,7 @@
     "yaml": "^2.3.4"
   },
   "scripts": {
-    "manoj": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "manoj": "tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch"
   },
   "author": "",
   "license": "ISC",

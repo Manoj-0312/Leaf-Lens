@@ -1,0 +1,68 @@
+    <footer class="bg-green-100">
+        <div class="footer flex justify-around items-start py-16">
+          <div>
+            <div class="flex flex-col gap-12">
+              <img class="w-40" src="../static/new_assests/logo.png" alt="">
+              <div class=" flex flex-col justify-center items-center">
+                <p class="text-2xl">FOLLOW US</p>
+                <div class="follow flex gap-4 pt-4 justify-center items-center">
+                  <a><i class="text-xl fa-brands fa-facebook"></i></a>
+                  <a><i class="text-xl fa-brands fa-twitter"></i></a>
+                  <a><i class="text-xl fa-brands fa-linkedin"></i></a>
+                  <a><i class="text-xl fa-brands fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between gap-14">
+            <div class=" flex flex-col">
+              <p class="text-2xl mb-4">ABOUT US</p>
+              <a href="">Company profile</a>
+              <a href="">R & D</a>
+              <a href="">Our team</a>
+              <a href="">Our Promise</a>
+              <a href="">Our Milestones</a>
+    
+            </div>
+            <div class="flex flex-col">
+              <p class="text-2xl mb-4">OUR PRODUCTS</p>
+              <a href="">herbicides</a>
+              <a href="">Insecticide</a>
+              <a href="">Fungicide</a>
+    
+            </div>
+            <div class=" flex flex-col">
+              <p class="text-2xl mb-4">QUICK LINKS</p>
+              <a href="{{url_for('about_us')}}">About us</a>
+              <a href="{{url_for('about_us')}}">Our products</a>
+              <a href="">Career</a>
+              <a href="{{url_for('contactus')}}">Contact Us</a>
+    
+            </div>
+          </div>
+    
+    
+    
+    
+        </div>
+    
+      </footer>
+<script>
+    window.addEventListener('load', function() {
+      var loader = document.getElementById('loader');
+    loader.style.transition = '2s'; 
+    loader.style.opacity = '0'; 
+    setTimeout(function() {
+        loader.style.display = 'none'; 
+    }, 1000);
+});
+
+function send_city(){
+  var city = document.getElementsByName("city").value
+  console.log(city)
+}
+  </script>
+
+</body>
+
+</html>

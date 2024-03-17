@@ -1,0 +1,263 @@
+{% include 'header.html' %}
+
+    <link rel="stylesheet" href="../static/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .bgbg {
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+
+        .form-bg {
+            width: 45vw;
+            height: 56vh;
+            background-color: #3e9937ba;
+            /* box-shadow: 3px 3px 6px black; */
+            /* background-image: url('../new_assests/form-bg-min.jpg'); */
+            background-size: cover;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            margin: auto;
+            margin-top: 5%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .form-content {
+            width: 100%;
+            padding-top: 10%;
+            background-color: white;
+        }
+
+
+        .form-header {
+            color: rgb(0, 0, 0);
+            /* font-family: "Inter", sans-serif; */
+            font-weight: 500;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .form-header-div {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 15%;
+        }
+
+        .input-box-main {
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+
+        .input-box-main a {
+            color: rgb(0, 0, 0);
+            /* font-family: "Inter", sans-serif; */
+            font-size: medium;
+            text-decoration: none;
+            position: relative;
+            justify-content: right;
+            text-align: right;
+            display: flex;
+            margin-top: 0;
+        }
+
+        .form-img {
+            background-image: url('../static/new_assests/form-bg-min.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-width: 100%;
+            max-height: 100%;
+            background-position: left;
+            object-fit: contain;
+        }
+
+        .form-img img{
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        .input-box-main a:hover {
+            text-decoration: underline;
+        }
+
+        .input-box {
+            position: relative;
+            margin: 6%;
+        }
+
+        .input-box input {
+            border: none;
+            outline: none;
+            /* border: 2px solid gray; */
+            border-radius: 40px;
+            font-size: 16px;
+            /* font-family: "Montserrat", sans-serif; */
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .input-box i {
+            position: absolute;
+            right: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+
+        .input-box input::placeholder {
+            color: gray;
+        }
+
+        .username-box {
+            width: 100%;
+            border-radius: 30px;
+            padding: 8px 5px;
+            height: 5vh;
+            background-color: #F5F5F5;
+        }
+        .buttons {
+            margin-top: 3%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            display: flex;
+            width: 25%;
+            margin: 10px;
+            /* padding: 10px; */
+            height: 45px;
+            background: #3e9937ba;
+            border: none;
+            outline: none;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            cursor: pointer;
+            font-size: medium;
+            font-family: "Inter", sans-serif;
+            font-weight: 600;
+            color: white;
+        }
+
+        .btn a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .forgot-pass a {
+            color: black;
+            font-family: "Inter", sans-serif;
+            font-size: medium;
+            text-decoration: none;
+            position: relative;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .forgot-pass a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body class="bg-green-50">
+
+    <section>
+        <div class="form-bg shadow-2xl rounded-3xl">
+            <div class="form-img bg-center bg-cover rounded-tl-3xl rounded-bl-3xl"></div>
+            <div class="form-content rounded-r-3xl">
+                <form action="">
+                    <div class="form-header-div">
+                        <h2 class="form-header">Login</h2>
+                    </div>
+                    <div class="input-box-main">
+                        <div class="input-box">
+                            <input type="text" placeholder="Enter Username" required class="username-box shadow-xl">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" placeholder="Enter Password" required class="username-box shadow-xl" id="Password">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <div class="input-box-main forgot-pass text-black">
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                        <div id="password-msg" style="color:red;" class="left-3"></div>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" class="btn shadow-xl login-btn">Login</button>
+                        <button type="button" class="btn shadow-xl sign-up-btn">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.sign-up-btn').click(function() {
+                // Remove login and forgot password elements
+                $('.form-header').text('Sign Up');
+                $('.login-btn').remove();
+                $('.forgot-pass').remove();
+    
+                // Remove existing email and confirm password input boxes if they exist
+                $('.email-box').remove();
+                $('.confirm-password-box').remove();
+    
+                // Append email input box
+                $('.input-box-main').append(`
+                    <div class="input-box email-box">
+                        <input type="email" placeholder="Enter Email" required class="username-box shadow-xl">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                `);
+    
+                // Append confirm password input box
+                $('.input-box-main').append(`
+                    <div class="input-box confirm-password-box">
+                        <input type="password" placeholder="Confirm Password" required class="username-box shadow-xl" id="confirm-password">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                `);
+    
+                // Replace Sign Up button with Submit button
+                $('.sign-up-btn').text('Submit').removeClass('sign-up-btn').addClass('submit-sign-up');
+            });
+    
+            // Event listener for the click event on the Submit button
+            $('.form-content').on('mouseup', '.submit-sign-up', function() {
+                var password = $('#Password').val();
+                var confirm_password = $('#confirm-password').val();
+
+                if (password !== confirm_password) {
+                    $('#password-msg').text('Passwords do not match!');
+                        return false;
+                } else {
+                $('#password-msg').text('');
+                }
+            });
+        });
+    </script>
+    {% include 'footer.html' %}

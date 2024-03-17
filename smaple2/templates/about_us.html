@@ -1,0 +1,35 @@
+{% include 'header.html' %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+<div class="container mx-auto mt-16 mb-24">
+    <div class="bg-white rounded-lg shadow-lg p-10">
+        <div class="flex items-center justify-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-900">About Us</h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <img src="{{url_for('static',filename='new_assests/about_us.jpg')}}" alt="About Us" class="rounded-lg shadow-lg">
+            </div>
+            <div class="text-gray-700">
+                <h2 class="text-2xl font-semibold mb-4">Our Mission</h2>
+                <p class="text-lg mb-6">At <strong class="text-green-500">Leaf Lens</strong>, our mission is to revolutionize agriculture by empowering farmers with cutting-edge technology.</p>
+                <h2 class="text-2xl font-semibold mb-4">Our Vision</h2>
+                <p class="text-lg mb-6">We envision a future where farmers have access to advanced tools and knowledge that enable them to achieve greater productivity and sustainability.</p>
+                <h2 class="text-2xl font-semibold mb-4">Our Team</h2>
+                <p class="text-lg mb-6">Our team consists of experienced agronomists, data scientists, and software engineers dedicated to developing innovative solutions for the agricultural industry.</p>
+                <h2 class="text-2xl font-semibold mb-4">Our Values</h2>
+                <p class="text-lg">We are committed to integrity, sustainability, and collaboration. We believe in leveraging technology for the greater good and making a positive impact on the world.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'footer.html' %}

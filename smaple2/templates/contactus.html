@@ -1,0 +1,55 @@
+{% include 'header.html' %}
+
+
+<div class="container mx-auto mt-16">
+    <div class="bg-white rounded-lg shadow-lg p-10 mb-28">
+        <div class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-gray-800">Contact Us</h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-green-50 rounded-lg shadow-md flex flex-col items-center p-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-2">Manoj</h2>
+                <p class="text-lg text-gray-700">Email: manoj@example.com</p>
+                <p class="text-lg text-gray-700">Phone: +1 (123) 456-7890</p>
+            </div>
+            <div class="bg-blue-50 rounded-lg shadow-md flex flex-col items-center p-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-2">Neha</h2>
+                <p class="text-lg text-gray-700">Email: neha@example.com</p>
+                <p class="text-lg text-gray-700">Phone: +1 (234) 567-8901</p>
+            </div>
+            <div class="bg-purple-50 rounded-lg shadow-md flex flex-col items-center p-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-2">Sudeep</h2>
+                <p class="text-lg text-gray-700">Email: sudeep@example.com</p>
+                <p class="text-lg text-gray-700">Phone: +1 (345) 678-9012</p>
+            </div>
+        </div>
+        
+        <div class="mt-16 ">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Contact Form</h2>
+            <form action="{{url_for('contactus')}}" method="POST">
+                <div class="mb-4">
+                    <label for="name" class="block text-lg text-gray-700 mb-2">Name</label>
+                    <input type="text" id="name" name="Name" class="block w-full px-4 py-2 rounded-md bg-gray-200 focus:outline-none focus:bg-white" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-lg text-gray-700 mb-2">Email</label>
+                    <input type="email" id="email" name="Email" class="block w-full px-4 py-2 rounded-md bg-gray-200 focus:outline-none focus:bg-white" required>
+                </div>
+                <div class="mb-4">
+                    <label for="phone" class="block text-lg text-gray-700 mb-2">Phone Number</label>
+                    <input type="text" id="phone" name="Phone Number" class="block w-full px-4 py-2 rounded-md bg-gray-200 focus:outline-none focus:bg-white" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-lg text-gray-700 mb-2">Message</label>
+                    <textarea id="message" name="Message" class="block w-full px-4 py-2 rounded-md bg-gray-200 focus:outline-none focus:bg-white" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-5 rounded cursor-pointer shadow-xl mt-6">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% include 'footer.html' %}

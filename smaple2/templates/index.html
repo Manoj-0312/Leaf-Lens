@@ -1,0 +1,167 @@
+  {% include 'header.html' %}
+  <div id="loader">
+    <div class="corners">
+      <div class="corner corner--1"></div>
+      <div class="corner corner--2"></div>
+      <div class="corner corner--3"></div>
+      <div class="corner corner--4"></div>
+    </div>
+  </div>
+
+  <section style="background-image: url(../static/new_assests/hands-holding-baby-plants.jpg);" class="text-white h-fu bg-no-repeat bg-cover">
+    <div class="flex justify-around items-center font-semibold">
+
+      <div class="left_text_area  w-3/6 mx-28 ml-48  my-48 flex flex-col justify-center items-center">
+        <h1 class="text-9xl leading-tight w-5/5 text-center" style="text-shadow: 10px 10px 25px black;">The Future of Farming</h1>
+        <p class="text-xl pt-8  font-normal leading-6 w-3/5 text-center "style="text-shadow: 10px 10px 25px black;" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
+          eos nostrum voluptatum aliquid obcaecati ab alias amet consequuntur maxime tempore iure illo debitis est
+          sequi, at eaque reprehenderit quis. Harum. </p>
+        <p><button
+            class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-5 rounded cursor-pointer shadow-xl mt-6">Know
+            More </p>
+      </div>
+      <!-- <div class="w-3/6 flex justify-center">
+        <img class="w-4/6" src="../../new_assests/home-page-left.jpg" alt="plant">
+      </div> -->
+    </div>
+
+  </section>
+  <section class="h-screen  w-screen max-w-full	flex flex-col items-center bg-gradient-to-b from-white to-[#f9f9f9] pt-32 bg-no-repeat bg-left-bottom bg-cover" style="background-image: url(../static/new_assests/green-areca-palm.jpg);">
+    <div class="top_text_area  flex items-center justify-center flex-col">
+      <img class="w-40 mb-5" src="{{url_for('static', filename='new_assests/our_solution.png')}}" alt="">
+      <h1 class="text-5xl">Our Solutions</h1>
+    </div>
+    <div class="flex justify-evenly mt-20">
+      <div class="flex items-center flex-col  w-3/12 shadow-2xl bg-white rounded-3xl border py-7 px-6 ">
+        <img class="w-56" src="{{url_for('static', filename='new_assests/our_solution.png')}}" alt="this is our Solutions">
+        <h1 class="text-3xl my-5">HELLO</h1>
+        <div>
+          <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum quam facilis cupiditate
+            recusandae nihil eaque autem repellat! Doloremque omnis, veritatis ullam iusto repudiandae, recusandae
+            atque, assumenda quam at ipsa molestias?</p>
+        </div>
+      </div>
+      <div class="flex items-center flex-col  w-3/12 shadow-2xl bg-white py-7 px-6 rounded-3xl border">
+        <img class="w-56" src="{{url_for('static', filename='new_assests/our_solution.png')}}" alt="this is our Solutions">
+        <h1 class="text-3xl my-5">HELLO</h1>
+        <div>
+          <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum quam facilis cupiditate
+            recusandae nihil eaque autem repellat! Doloremque omnis, veritatis ullam iusto repudiandae, recusandae
+            atque, assumenda quam at ipsa molestias?</p>
+        </div>
+      </div>
+      <div class="flex items-center flex-col  w-3/12 shadow-2xl bg-white py-7 px-6 rounded-3xl border">
+        <img class="w-56" src="{{url_for('static', filename='new_assests/our_solution.png')}}" alt="this is our Solutions">
+        <h1 class="text-3xl my-5">HELLO</h1>
+        <div>
+          <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum quam facilis cupiditate
+            recusandae nihil eaque autem repellat! Doloremque omnis, veritatis ullam iusto repudiandae, recusandae
+            atque, assumenda quam at ipsa molestias?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="weather w-screen h-screen max-w-full bg-[#f9f9f9] flex items-center justify-center bg-cover bg-left-top" style="background-image: url(../static/new_assests/green-areca-palm-rotated.jpg);">
+    <div class="card w-10/12  bg-white h-5/6 rounded-3xl border shadow-2xl flex">
+      <div class="right_div h-full w-4/6 rounded-l-3xl ">
+        <div class="pt-12 px-28 text-3xl flex justify-between h-1/6">
+          {% if weather %}
+          <p>{{weather[1]}}</p>
+          {% else %}
+
+
+          <div>City</div>
+          {% endif %}
+
+
+          <div class="font-semibold text-4xl">Weather Information</div>
+          {% if weather %}
+          
+          <div>{{weather[0][0]["date"].split(" ")[0]}}</div>
+          {% else %}
+
+          <div>date</div>
+          {% endif %}
+
+        </div>
+        <div class=" h-3/6 flex justify-center items-center gap-10" >
+          <div class="flex flex-col items-center ">
+
+            <div class="text-[150px] font-semibold ">{{weather[0][0]["temparatures"]}}°C</div>
+            <div class="text-4xl"> {{weather[0][0]["description"].capitalize()}}</div>
+          </div>
+          <div class="pl-8">
+
+            <div class="text-2xl"><i class="fa-solid fa-wind pr-3"></i>{{weather[0][0]["wind_speed"]}}</div>
+            <div class="text-2xl"><i class="fa-solid fa-droplet pr-3"></i>{{weather[0][0]["humidity"]}}</div>
+          </div>
+
+        </div>
+        <div class=" h-2/6 flex justify-center items-center gap-4">
+          {% if weather %}
+
+          {% for i in range(0,40,8) %}
+          <div class=" h-2/3 w-40 flex flex-col justify-center items-center gap-4 rounded-2xl border-2">
+            <p class="text-xl  ">{{weather[0][i]["date"].split(" ")[0]}}</p>
+            <p class="text-3xl ">{{weather[0][i]["temparatures"]}}°C</p>
+          <p class="text-2xl  ">{{weather[0][i]["todays_forecast"]}}</p>
+          </div>
+          {% endfor %}
+        </div>
+        {% else %}
+        <div class=" h-2/3 w-40 flex flex-col justify-center items-center gap-4 rounded-2xl border-2">
+          <p class="text-xl  ">Toady</p>
+          <p class="text-3xl ">20°C</p>
+        <p class="text-2xl  ">Rainy</p>
+        </div>
+        {% endif %}
+
+
+      </div>
+
+
+      <div class="left_div h-full w-2/6 rounded-r-3xl flex flex-col justify-center gap-5 items-center pt-12 bg-gray-50">
+        <div class="text-xl px-4 py-2 border-b-2 border-gray-400 rounded-md bg-white flex justify-center items-center"><i class="fa-solid text-gray-400 fa-magnifying-glass pr-2" ></i> <form action="{{url_for('home')}}" method="post">
+          <input type="text" name="city" placeholder="Enter city name" required>
+          <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-3 rounded cursor-pointer shadow-xl" type="submit">Enter</button>
+      </form></div>
+        <!-- <input id="myInput" class="outline-none" type="text" name="city" placeholder="Enter Your city Name" > -->
+      <div class="text-2xl ">time</div>
+      <div class=" h-1/6 flex justify-center items-center" >
+        <div class="flex flex-col items-center ">
+
+          <div class="text-5xl font-thin ">{{weather[0][0]["temparatures"]}}°C</div>
+        </div>
+        <div class="pl-8">
+
+          <div><i class="fa-solid fa-wind pr-3"></i>{{weather[0][0]["wind_speed"]}}</div>
+          <div><i class="fa-solid fa-droplet pr-3"></i>{{weather[0][0]["humidity"]}}</div>
+        </div>
+
+      </div>
+      <div>Temparature</div>
+
+        <div class="text-2xl">Hourly forecast</div>
+
+        <div class="cards flex justify-center items-center flex-wrap gap-4">
+          {% if weather %}
+
+          {% for i in range(8) %}
+        <div class="h-2/5 w-28 py-4 flex flex-col justify-center items-center gap-4 rounded-2xl border ">
+          <p class="text-xl  ">{{weather[0][i]["date"].split(" ")[1].split(":")[0]}}:{{weather[0][i]["date"].split(" ")[1].split(":")[1]}}</p>
+            <p class="text-2xl ">{{weather[0][i]["temparatures"]}}°C</p>
+          <!-- <p class="text-xl">{{weather[0][i]["description"]}}</p> -->
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class=" h-2/5 w-28 py-4 flex flex-col justify-center items-center gap-4 rounded-2xl border ">
+          <p class="text-xl  ">Today</p>
+          <p class="text-4xl ">20°</p>
+        </div>
+        {% endif %}
+        
+      </div>
+      </div>
+    </div>
+    </section>
+    {% include 'footer.html' %}
