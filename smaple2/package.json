@@ -1,5 +1,7 @@
 {
   "devDependencies": {
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
     "tailwindcss": "^3.4.1"
   },
   "name": "smaple2",
@@ -58,11 +60,11 @@
     "path-key": "^3.1.1",
     "path-parse": "^1.0.7",
     "path-scurry": "^1.10.1",
+    "pg": "^8.11.3",
     "picocolors": "^1.0.0",
     "picomatch": "^2.3.1",
     "pify": "^2.3.0",
     "pirates": "^4.0.6",
-    "postcss": "^8.4.35",
     "postcss-import": "^15.1.0",
     "postcss-js": "^4.0.1",
     "postcss-load-config": "^4.0.2",
@@ -70,6 +72,7 @@
     "postcss-selector-parser": "^6.0.15",
     "postcss-value-parser": "^4.2.0",
     "queue-microtask": "^1.2.3",
+    "react-chartjs-2": "^5.2.0",
     "read-cache": "^1.0.0",
     "readdirp": "^3.6.0",
     "resolve": "^1.22.8",
