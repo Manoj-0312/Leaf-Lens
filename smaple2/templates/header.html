@@ -21,12 +21,23 @@
       <a href="{{url_for('about_us')}}"><li class="text-xl font-semibold cursor-pointer	">About</li></a>
       <a href="{{url_for('products')}}"><li class="text-xl font-semibold cursor-pointer	">Store</li></a>
       <a href="{{url_for('contactus')}}"><li class="text-xl font-semibold cursor-pointer	">Contact</li></a>
+      <a href="{{url_for('predict')}}"><li class="text-xl font-semibold cursor-pointer	">More</li></a>
       <a href="{{url_for('more')}}"><li class="text-xl font-semibold cursor-pointer	">More</li></a>
     </ul>
     <ul class="flex gap-x-10 items-center text-xl">
-      <li><i class="fa-solid fa-user cursor-pointer	"></i></li>
+      <li><i id="logout1" class="fa-solid fa-user cursor-pointer	"></i></li>
       <li><a href="{{url_for('login')}}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded cursor-pointer shadow-xl">Login
           <i class="fa-solid fa-arrow-right-to-bracket"></i></a></i></li>
     </ul>
+    
+    
   </nav>
+
+  <script>
+    document.getElementById('userIcon').addEventListener('click', function() {
+        document.getElementById('moreList').classList.toggle('hidden');
+    });
+</script>
+
+  
   

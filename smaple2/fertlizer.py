@@ -54,66 +54,46 @@ transformed_data = {
         'Function': 'Important for cell wall structure, disease resistance, and overall plant health',
         'Application': 'Helps prevent disorders like blossom end rot in tomatoes and peppers'
     },
-    'Potassium-containing fertilizers': {
-        'Disease': ['Powdery Mildew', 'Rhizoctonia Root Rot', 'Beet Cyst Nematode', 'Angular Leaf Spot','Downy Mildew', 'Spinach Blight', 'Fusarium Wilt', 'Bacterial Wilt', 'Verticillium Wilt', 'Phytophthora Blight','Pythium Rot', 'Alternaria Leaf Blight', 'Clubroot', 'Downy Mildew','Tomato Blight', 'Onion White Rot', 'Garlic White Rot'],
-        'Image_URLs': 'https://m.media-amazon.com/images/I/7134v94drOL.jpg',
-        'Function': 'Essential for overall plant health, stress tolerance, and disease resistance',
-        'Application': 'Promotes strong stems, improves fruit quality, and aids in water regulation'
-            },
-    'Balanced NPK fertilizers': {
-        'Disease': ['Powdery Mildew', 'Beet Cyst Nematode','Downy Mildew', 'Spinach Blight', 'Fusarium Wilt', 'Bacterial Wilt', 'Verticillium Wilt', 'Phytophthora Blight','Tomato Blight', 'Onion Smut', 'Garlic Rust'],
-        'Image_URLs': 'https://m.media-amazon.com/images/I/71Oc+zENm1L._AC_UF1000,1000_QL80_.jpg',
-        'Function': 'Provides a complete nutrient package for healthy plant development.',
-        'Application':'Balanced NPK fertilizers like 10-10-10 are applied in spring for annuals and perennials, with repeat applications every 4-6 weeks, while for trees and shrubs, they are best applied in early spring using slow-release granular fertilizer spread evenly under the canopy'
-    },
-    'Organic fertilizers': {
-        'Disease': ['Bacterial Wilt', 'Carrot Black Rot', 'Onion Smut'],
-        'Image_URLs': 'https://m.media-amazon.com/images/I/71zxEAIaI7L._SX522_.jpg',
-        'Function': 'Derived from natural sources to improve soil structure and provide slow-release nutrients.',
-        'Application': 'Enhances soil health, promotes microbial activity, and supports sustainable gardening practices.'
-    },
     'Phosphorus-based fertilizers': {
         'Disease': ['Rhizoctonia Root Rot', 'Angular Leaf Spot', 'Spinach Blight', 'Fusarium Wilt', 'Bacterial Wilt', 'Phytophthora Blight', 'Pythium Rot', 'Alternaria Leaf Blight', 'Black Rot of Cabbage', 'Downy Mildew'],
-        'Image_URLs': 'https://m.media-amazon.com/images/I/71Y7VorNZ-L._AC_SX466_.jpg',
+        'Image_URLs': 'https://m.media-amazon.com/images/I/719wTVdzkYL.jpg',
         'Function': 'Essential for root development, flowering, and fruiting.',
         'Application': 'Supports healthy root systems and improves overall plant vigor.'
     },
     'Magnesium-containing fertilizers': {
         'Disease': ['Tomato Blight', 'Onion Downy Mildew', 'Garlic Rust', 'Beet Cyst Nematode', 'Clubroot'],
-        'Image_URLs': 'https://m.media-amazon.com/images/I/51nWjNyFZQL.jpg',
+        'Image_URLs': 'https://www.bombaygreens.com/cdn/shop/files/EpsomSalt-V1-01_800x.jpg?v=1686145936',
         'Function': 'Crucial for photosynthesis, enzyme activation, and nutrient uptake.',
         'Application': 'Corrects magnesium deficiencies and enhances plant growth and yield.'
     },
     'Zinc-containing fertilizers': {
         'Disease': ['Black Sigatoka', 'Yellow Vein Mosaic Virus (YVMV)', 'Bacterial Spot', 'Onion Smut', 'Garlic Rust'],
-        'Image_URLs': 'https://m.media-amazon.com/images/I/41dMj7PbEoL.jpg',
+        'Image_URLs': 'https://m.media-amazon.com/images/I/713geAwU5vL.jpg',
         'Function': 'Essential for enzyme activation, protein synthesis, and hormone regulation.',
         'Application': 'Addresses zinc deficiencies in soils and promotes healthy plant growth.'
     },
     'Iron-containing fertilizers': {
         'Disease': ['Tomato Yellow Leaf Curl Virus (TYLCV)', 'Stem and Bulb Nematode', 'Powdery Mildew', 'Downy Mildew', 'Onion Downy Mildew'],
-        'Image_URLs': 'https://m.media-amazon.com/images/I/41YByxjAObL.jpg',
+        'Image_URLs': 'https://5.imimg.com/data5/SELLER/Default/2023/6/319680091/RG/SV/PZ/19090231/iron-micronutrient-fertilizer.jpg',
         'Function': 'Critical for chlorophyll production, energy transfer, and nitrogen fixation.',
         'Application': 'Corrects iron deficiencies and enhances plant growth and color.'
     },
     'Manganese-containing fertilizers': {
         'Disease': ['Powdery Mildew', 'Ginger Rhizome Rot', 'Black Rot of Cabbage', 'Clubroot', 'Fusarium Wilt'],
-        'Image_URLs': 'https://m.media-amazon.com/images/I/51FLuO1GbjL._AC_SL1200_.jpg',
+        'Image_URLs': 'https://5.imimg.com/data5/SELLER/Default/2022/8/KI/OS/WV/142405404/manganese-sulphate-500x500.jpg',
         'Function': 'Necessary for enzyme activation, photosynthesis, and nitrogen metabolism.',
         'Application': 'Addresses manganese deficiencies and improves plant growth and yield.'
     },
     'Calcium Nitrate fertilizers': {
         'Disease': ['Angular Leaf Spot', 'Spinach Blight', 'Fusarium Wilt', 'Phytophthora Blight', 'Pythium Rot'],
-        'Image_URLs': 'https://m.media-amazon.com/images/I/51e9dIRTR-L.jpg',
+        'Image_URLs': 'https://static.wixstatic.com/media/4d11a1_37fd9daa86664661898daaeb2032b73f~mv2.jpg/v1/fill/w_550,h_550,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/4d11a1_37fd9daa86664661898daaeb2032b73f~mv2.jpg',
         'Function': 'Provides a readily available source of calcium and nitrogen for plants.',
         'Application': 'Prevents calcium deficiencies and promotes healthy cell walls and growth.'
     },
     'Boron-containing fertilizers': {
         'Disease': ['Carrot Fly (Psila rosae)', 'Black Rot of Cabbage', 'Pythium Rot', 'Alternaria Leaf Blight'],
-        'Image_URLs': 'https://m.media-amazon.com/images/I/61QqG17pWiL._AC_SL1001_.jpg',
+        'Image_URLs': 'https://casadeamor.in/cdn/shop/files/boron250gm.jpg?v=1697618477&width=1920',
         'Function': 'Essential for cell division, sugar transport, and hormone regulation.',
-        'Application': 'Corrects boron deficiencies and improves flowering and fruit set.'
-    }
+        'Application': 'Corrects boron deficiencies and improves flowering and fruit set.'
+        }
 }
-
-   

@@ -1,1 +1,150 @@
 {% include 'header.html' %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+    .bgbg {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .form-bg {
+        width: 45vw;
+        height: 56vh;
+        background-color: #3e9937ba;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin: auto;
+        margin-top: 5%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .form-content {
+        width: 100%;
+        padding-top: 10%;
+        background-color: white;
+    }
+
+    .form-header {
+        color: #333;
+        font-weight: 500;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .input-box {
+        position: relative;
+        margin: 6%;
+    }
+
+    .input-box input {
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 12px 20px;
+        padding-left: 45px; /* Added padding for icon */
+        width: calc(100% - 65px); /* Adjusted width for icon */
+    }
+
+    .input-box i {
+        position: absolute;
+        left: 20px; /* Changed position to left */
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        color: #333;
+    }
+
+    .input-box input::placeholder {
+        color: #999;
+    }
+
+    .btn {
+        display: block;
+        width: calc(100% - 20%);
+        margin: 20px auto;
+        height: 45px;
+        background: #3e9937ba;
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #328332;
+    }
+
+    .error-msg {
+        color: red;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .form-img{
+        background-image: url(../static/new_assests/form-bg-min.jpg);
+        background-position: left;
+    }
+</style>
+
+<section class="mb-32">
+    <div class="form-bg shadow-2xl rounded-3xl">
+        <div class="form-img bg-center bg-cover rounded-tl-3xl rounded-bl-3xl"></div>
+        <div class="form-content rounded-r-3xl">
+            <form id="signup-form" action="/sign_up" method="post">
+                <div class="form-header-div">
+                    <h2 class="form-header">Sign Up</h2>
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Enter Username" required class="username-box shadow-xl" name="username" id="username">
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Enter Email" required class="email-box shadow-xl" name="email"  id="email">
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Enter Password" required class="password-box shadow-xl" id="Password" name="Password">
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Confirm Password" required class="password-box shadow-xl" id="confirm-password">
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn shadow-xl sign-up-btn">Sign Up</button>
+                </div>
+                <div id="password-msg" class="error-msg"></div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.sign-up-btn').click(function() {
+            var password = $('#Password').val();
+            var confirm_password = $('#confirm-password').val();
+
+            if (password !== confirm_password) {
+                $('#password-msg').text('Passwords do not match!');
+            } else {
+                $('#password-msg').text('');
+                $('#signup-form').submit();
+            }
+        });
+    });
+</script>
+
+{% include 'footer.html' %}

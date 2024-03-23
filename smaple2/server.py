@@ -8,13 +8,29 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, String, ARRAY
 from flask_login import UserMixin,login_user,login_required,logout_user,current_user,LoginManager
 from werkzeug.security import generate_password_hash,check_password_hash
+from werkzeug.utils import secure_filename
 import requests
 from MarketPrices import fruit_prices,vegetable_prices
-# from fertlizer import transformed_data
-# import tensorflow as tf
-# import numpy as np
-# from PIL import Image
-# from io import BytesIO
+from fertlizer import transformed_data
+import tensorflow as tf
+import os
+import numpy as np
+from PIL import Image
+from io import BytesIO
+
+
+model = tf.keras.models.load_model("M:/Documents/Plant_disease_model/models/version_1/") 
+
+
+
+
+
+def preprocess_image(image_path):
+    image = Image.open(image_path)
+    image = image.resize((128,128))  # Assuming input size of the model is 224x224
+    img_array = np.array(image).astype('uint8')
+    img_array = np.expand_dims(img_array,0)
+    return img_array
 
 
 classes = ['Apple___Apple_scab',
@@ -64,11 +80,17 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:manoj4897@localhost:5432/Leaf_lens'
 db = SQLAlchemy(app)
 
+app.config['UPLOAD_FOLDER'] = 'uploads'
+
+
+
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), nullable=False, unique=True)
     email = db.Column(db.String(120),nullable=False)
     password = db.Column(db.String(200), nullable=False)
+
+    
 
 
 class MarketPrices_fruits(db.Model):
@@ -118,7 +140,7 @@ def home():
     else:
         city = "bangalore"
 
-    url = "https://api.openweathermap.org/data/2.5/forecast"
+    url = "https://api.openweathermap.org/data/2.5/forecast/"
 
 
     params = {
@@ -154,9 +176,33 @@ def about_us():
 
 
 
-@app.route("/predict")
+@app.route("/predict", methods=['GET', 'POST'])
 def predict():
-    return render_template('predict.html')
+    if request.method == 'POST':
+        if 'image' not in request.files:
+            return render_template('predict.html', prediction="No file uploaded")
+
+        file = request.files['image']
+        if file.filename == '':
+            return render_template('predict.html', prediction="No selected file")
+
+        if file:
+            # Save the uploaded file to a secure location
+            filename = secure_filename(file.filename)
+            file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            file.save(file_path)
+
+            # Preprocess the uploaded image
+            processed_image = preprocess_image(file_path)
+
+            # Make predictions using the preprocessed image
+            prediction = model.predict(processed_image)
+            predicted_class = np.argmax(prediction[0])
+            predicted_class = classes[predicted_class]
+
+            return render_template('predict.html', prediction=predicted_class)
+
+    return render_template('predict.html', prediction="ERROR")
 
 @app.route('/login',methods=['GET','POST'])
 def login():
@@ -167,16 +213,16 @@ def login():
         user=User.query.filter_by(username=username).first()
         if user:
             if check_password_hash(user.password,password):
-                login_user(user,remember=True)
-                return redirect(url_for('index'))
+                # login_user(user,remember=True)
+                return redirect(url_for('home'))
             else:
                 error_msg="please check your password it is incorrect"
-                return render_template('login_register.html',error_msg=error_msg)
+                return render_template('login.html',error_msg=error_msg)
         else:
             error_msg="username is incorrect"
-            return render_template('login_register.html',error_msg=error_msg)
+            return render_template('login.html',error_msg=error_msg)
 
-    return render_template('login.html')
+    return render_template('login.html',error_msg="")
 
 @app.route('/contactus',methods=['GET', 'POST'])
 def contactus():
@@ -258,35 +304,35 @@ def get_all_vegetables():
                                                 'shoping_mall_price': item.shoping_mall_price}} for item in MarketPrices_of_all]
     return jsonify({'Market_prices':item_prices})
 
-# @app.route("/add_fruits")
-# def add_prices_fruits():
-#     fruit_names = list(fruit_prices.keys())
-#     for i in range(len(fruit_names)):
-#         name = fruit_names[i]
-#         img_url = fruit_prices[fruit_names[i]]['url']
-#         wholesale_price = fruit_prices[fruit_names[i]]['Wholesale_Price']
-#         retail_price = fruit_prices[fruit_names[i]]['Retail_Price'][0]
-#         shoping_mall_price = fruit_prices[fruit_names[i]]['Shopping_Mall_Price'][0]
-#         new_fruit = MarketPrices_fruits(name=name,img_url=img_url,wholesale_price=wholesale_price,retail_price=retail_price,shoping_mall_price=shoping_mall_price)
-#         db.session.add(new_fruit)
-#         db.session.commit()
+@app.route("/add_fruits")
+def add_prices_fruits():
+    fruit_names = list(fruit_prices.keys())
+    for i in range(len(fruit_names)):
+        name = fruit_names[i]
+        img_url = fruit_prices[fruit_names[i]]['url']
+        wholesale_price = fruit_prices[fruit_names[i]]['Wholesale_Price']
+        retail_price = fruit_prices[fruit_names[i]]['Retail_Price'][0]
+        shoping_mall_price = fruit_prices[fruit_names[i]]['Shopping_Mall_Price'][0]
+        new_fruit = MarketPrices_fruits(name=name,img_url=img_url,wholesale_price=wholesale_price,retail_price=retail_price,shoping_mall_price=shoping_mall_price)
+        db.session.add(new_fruit)
+        db.session.commit()
 
-#     return jsonify({'message':"done"})
+    return jsonify({'message':"done"})
 
-# @app.route("/add_vegs")
-# def add_prices_vegs():
-#     vegs_name = list(vegetable_prices.keys())
-#     for i in range(len(vegs_name)):
-#         name = vegs_name[i]
-#         img_url = vegetable_prices[vegs_name[i]]['url']
-#         wholesale_price = vegetable_prices[vegs_name[i]]['Wholesale_Price']
-#         retail_price = vegetable_prices[vegs_name[i]]['Retail_Price'][0]
-#         shoping_mall_price = vegetable_prices[vegs_name[i]]['Shopping_Mall_Price'][0]
-#         new_fruit = MarketPrices_vegs(name=name,img_url=img_url,wholesale_price=wholesale_price,retail_price=retail_price,shoping_mall_price=shoping_mall_price)
-#         db.session.add(new_fruit)
-#         db.session.commit()
+@app.route("/add_vegs")
+def add_prices_vegs():
+    vegs_name = list(vegetable_prices.keys())
+    for i in range(len(vegs_name)):
+        name = vegs_name[i]
+        img_url = vegetable_prices[vegs_name[i]]['url']
+        wholesale_price = vegetable_prices[vegs_name[i]]['Wholesale_Price']
+        retail_price = vegetable_prices[vegs_name[i]]['Retail_Price'][0]
+        shoping_mall_price = vegetable_prices[vegs_name[i]]['Shopping_Mall_Price'][0]
+        new_fruit = MarketPrices_vegs(name=name,img_url=img_url,wholesale_price=wholesale_price,retail_price=retail_price,shoping_mall_price=shoping_mall_price)
+        db.session.add(new_fruit)
+        db.session.commit()
 
-#     return jsonify({'message':"done"})
+    return jsonify({'message':"done"})
 
 if __name__=='__main__':
     app.run(debug=True)
