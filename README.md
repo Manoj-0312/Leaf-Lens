@@ -52,9 +52,3 @@ The application provides the following API endpoints:
 
 This project is licensed under the [MIT License](LICENSE).
 
-## Testing
-
-To run the tests, execute the following command:
-```
-pytest
-```
