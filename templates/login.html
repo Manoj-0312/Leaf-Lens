@@ -48,13 +48,13 @@
         font-size: 16px;
         font-weight: 400;
         padding: 12px 20px;
-        padding-left: 45px; /* Added padding for icon */
-        width: calc(100% - 65px); /* Adjusted width for icon */
+        padding-left: 45px;
+        width: calc(100% - 65px);
     }
 
     .input-box i {
         position: absolute;
-        left: 20px; /* Changed position to left */
+        left: 20px;
         top: 50%;
         transform: translateY(-50%);
         font-size: 20px;
@@ -101,30 +101,23 @@
     <div class="form-bg shadow-2xl rounded-3xl">
         <div class="form-img bg-center bg-cover rounded-tl-3xl rounded-bl-3xl"></div>
         <div class="form-content rounded-r-3xl">
-            <form id="signup-form" action="/sign_up" method="post">
+            <form id="login-form" method="post" action="/login">
                 <div class="form-header-div">
-                    <h2 class="form-header">Sign Up</h2>
+                    <h2 class="form-header">Login</h2>
                 </div>
                 <div class="input-box">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Enter Username" required class="username-box shadow-xl" name="username" id="username">
-                </div>
-                <div class="input-box">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Enter Email" required class="email-box shadow-xl" name="email"  id="email">
+                    <input type="text" placeholder="Enter Username" required class="username-box shadow-xl -z-50" name="username" id="username">
                 </div>
                 <div class="input-box">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Enter Password" required class="password-box shadow-xl" id="Password" name="Password">
-                </div>
-                <div class="input-box">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Confirm Password" required class="password-box shadow-xl" id="confirm-password">
+                    <input type="password" placeholder="Enter Password" required class="password-box shadow-xl" id="password" name="password">
                 </div>
                 <div class="buttons">
-                    <button type="button" class="btn shadow-xl sign-up-btn">Sign Up</button>
+                    <button type="button" class="btn shadow-xl login-btn">Login</button>
+                    <button type="button" class="btn shadow-xl signup-btn">Sign Up</button>
                 </div>
-                <div id="password-msg" class="error-msg"></div>
+                <div id="password-msg" class="error-msg">{{error_msg}}</div>
             </form>
         </div>
     </div>
@@ -133,16 +126,14 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('.sign-up-btn').click(function() {
-            var password = $('#Password').val();
-            var confirm_password = $('#confirm-password').val();
+        $('.login-btn').click(function() {
+            // Validation and login functionality can be added here
+            $('#login-form').submit();
+        });
 
-            if (password !== confirm_password) {
-                $('#password-msg').text('Passwords do not match!');
-            } else {
-                $('#password-msg').text('');
-                $('#signup-form').submit();
-            }
+        $('.signup-btn').click(function() {
+            // Redirect to sign-up page or show sign-up form
+            window.location.href = "/sign_up";
         });
     });
 </script>
